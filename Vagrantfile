@@ -135,7 +135,7 @@ Vagrant.configure("2") do |config|
         ./provision.sh production portal 
 
         sed -i \
-          -e "/\[Unit\]/a Wants=portal.service" \
+          -e "/\\[Unit\\]/a Wants=portal.service" \
           -e "s@/etc/environment@/etc/benchmark_environment@" \
           cookbooks/benchmarker/recipes/default.rb
 
